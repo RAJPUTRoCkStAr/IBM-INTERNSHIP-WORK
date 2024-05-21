@@ -1,0 +1,11 @@
+whenever you will create a module and run it 
+The .pyc files are created by the Python interpreter when you import a module or run a script. They serve as a cache of the bytecode, which allows for faster execution of the code in subsequent runs. The bytecode is stored in these files so that the interpreter can avoid recompiling the source code every time the module is imported or executed.
+
+The ".pyc" extension stands for "Python Compiled" file. These files contain Python bytecode, which is a lower-level representation of the Python source code. Python bytecode is not meant to be human-readable but is used by the Python interpreter for faster execution of the code. When you run a Python script or import a module, the Python interpreter first compiles the source code into bytecode and then executes it. The compiled bytecode is stored in ".pyc" files to avoid recompiling the code every time it's executed, which helps in improving the overall performance of the Python program.
+
+when there is 
+1) sqauare bracket [] than it is list.
+2) when its paranthsesis () its an tuple. In tuples its not neccessary to add paranthsesis
+3) when its cruly braceses {} then its a set or dictionary.
+
+json import will not work if you give the name of the file is as it's importer name.
