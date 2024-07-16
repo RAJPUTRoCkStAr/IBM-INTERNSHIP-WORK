@@ -1,0 +1,96 @@
+* What are Data Structures?
+Data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.
+if you want to store data sequentially in the memory, then you can go for the Array data structure.
+Types of Data Structure
+Basically, data structures are divided into two categories:
+* a => Linear data structure
+* b => Non-linear data structure
+
+* a =>Linear data structures
+In linear data structures, the elements are arranged in sequence one after the other. Since elements are arranged in particular order, they are easy to implement.
+
+Popular linear data structures are:
+* 1. Array Data Structure
+* 2. Stack Data Structure
+* 3. Queue Data Structure
+* 4. Linked List Data Structure
+
+* 1. Array Data Structure
+In an array, elements in memory are arranged in continuous memory. All the elements of an array are of the same type. 
+
+* 2. Stack Data Structure
+In stack data structure, elements are stored in the LIFO principle. That is, the last element stored in a stack will be removed first.
+
+* 3. Queue Data Structure
+Unlike stack, the queue data structure works in the FIFO principle where first element stored in the queue will be removed first.
+
+* 4. Linked List Data Structure
+In linked list data structure, data elements are connected through a series of nodes. And, each node contains the data items and address to the next node.
+
+* b => Non linear data structures
+Unlike linear data structures, elements in non-linear data structures are not in any sequence. Instead they are arranged in a hierarchical manner where one element will be connected to one or more elements.
+its also has various types like 
+* 1. Graph Data Structure
+* 2. Trees Data Structure
+
+* 1. Graph Data Structure
+In graph data structure, each node is called vertex and each vertex is connected to other vertices through edges.
+Popular Graph Based Data Structures:
+* Spanning Tree and Minimum Spanning Tree
+* Strongly Connected Components
+* Adjacency Matrix
+* Adjacency List
+
+* 2. Trees Data Structure
+Similar to a graph, a tree is also a collection of vertices and edges. However, in tree data structure, there can only be one edge between two vertices.
+
+Popular Tree based Data Structure
+* Binary Tree
+* Binary Search Tree
+* AVL Tree
+* B-Tree
+* B+ Tree
+* Red-Black Tree
+
+Divide and Conquer Applications
+some of its types are 
+* Binary Search
+* Merge Sort
+* Quick Sort
+* Strassen's Matrix multiplication
+* Karatsuba Algorithm
+
+
+*** Stack Data Structure ***
+A stack is a linear data structure that follows the principle of Last In First Out  (LIFO). This means the last element inserted inside the stack is removed first.
+
+Basic Operations of Stack
+There are some basic operations that allow us to perform different actions on a stack.
+
+* Push: Add an element to the top of a stack
+* Pop: Remove an element from the top of a stack
+* IsEmpty: Check if the stack is empty
+* IsFull: Check if the stack is full
+* Peek: Get the value of the top element without removing it
+
+
+
+* Applications of Stack Data Structure
+Although stack is a simple data structure to implement, it is very powerful. The most common uses of a stack are:
+
+* To reverse a word - Put all the letters in a stack and pop them out. Because of the LIFO order of stack, you will get the letters in reverse order.
+* In compilers - Compilers use the stack to calculate the value of expressions like 2 + 4 / 5 * (7 - 9) by converting the expression to prefix or postfix form.
+* In browsers - The back button in a browser saves all the URLs you have visited previously in a stack. Each time you visit a new page, it is added on top of the stack. When you press the back button, the current URL is removed from the stack, and the previous URL is accessed.
+
+* Queue Data Structure
+A queue is a useful data structure in programming. It is similar to the ticket queue outside a cinema hall, where the first person entering the queue is the first person who gets the ticket.
+* In programming terms, putting items in the queue is called enqueue, and removing items from the queue is called dequeue.
+
+* Basic Operations of Queue
+A queue is an object (an abstract data structure - ADT) that allows the following operations:
+
+* Enqueue: Add an element to the end of the queue
+* Dequeue: Remove an element from the front of the queue
+* IsEmpty: Check if the queue is empty
+* IsFull: Check if the queue is full
+* Peek: Get the value of the front of the queue without removing it
