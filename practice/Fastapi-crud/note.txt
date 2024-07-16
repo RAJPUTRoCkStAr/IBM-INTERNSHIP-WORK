@@ -1,0 +1,4 @@
+fastapi its is most fastest api in python that supports async thing.
+so basically there are 2 urls that fastapi give us for crud 
+http://127.0.0.1:8000/redoc 
+http://127.0.0.1:8000/docs 

@@ -1,0 +1,248 @@
+selenium only
+Locators	            Description
+By.ID	                The first element with the id attribute value matching the location will be returned.
+By.NAME	                The first element with the name attribute value matching the location will be returned.
+By.XPATH	            The first element with the xpath syntax matching the location will be returned.
+By.LINK_TEXT	        The first element with the link text value matching the location will be returned.
+By.PARTIAL_LINK_TEXT	The first element with the partial link text value matching the location will be returned.
+By.TAG_NAME	            The first element with the given tag name will be returned.
+By.CLASS_NAME	        the first element with the matching class attribute name will be returned.
+By.CSS_SELECTOR	        The first element with the matching CSS selector will be returned.
+
+for multiple elements
+just write elements
+
+
+
+Method	                    Description
+click	                    Clicks an element.
+click_and_hold	            Holds down the left mouse button on an element.
+context_click	            Performs a context-click (right click) on an element.
+double_click	            Double-clicks an element.
+drag_and_drop	            Holds down the left mouse button on the source element, then moves to the target element and releases the mouse button.
+drag_and_drop_by_offset	    Holds down the left mouse button on the source element, then moves to the target offset and releases the mouse button.
+key_down	                Sends a key press only, without releasing it.
+key_up	                    Releases a modifier key.
+move_by_offset	            Moving the mouse to an offset from current mouse position.
+move_to_element	            Moving the mouse to the middle of an element.
+move_to_element_with_offset	Move the mouse by an offset of the specified element, Offsets are relative to the top-left corner of the element.
+perform	                    Performs all stored actions.
+pause	                    Pause all inputs for the specified duration in seconds
+release	                    Releasing a held mouse button on an element.
+reset_actions	            Clears actions that are already stored locally and on the remote end
+send_keys	                Sends keys to current focused element.
+
+
+
+Method
+Description
+add_cookie
+
+This method is used to add cookies to the user’s current session.
+
+back
+
+This method allows you to move one page back.
+
+close
+
+This method will close the current window.
+
+create_web_element
+
+This method will create a web element having a specific element_id.
+
+delete_all_cookies
+
+It will help you delete all the cookies in the current session’s scope.
+
+delete_cookie
+
+It will only delete a single cookie based on the name.
+
+execute_async_script
+
+It will execute JavaScript asynchronously in the current frame.
+
+execute_script
+
+It will execute JavaScript synchronously in the current frame.
+
+forward
+
+It will help you go one page forward.
+
+fullscreen_window
+
+This method will invoke a ‘full screen’ operation specific to the window manager.
+
+get_cookie
+
+It will return a cookie if found, or else none.
+
+get_cookies
+
+It will return a bunch of dictionaries, each corresponding to the cookies that are currently visible in the present session.
+
+get_log
+
+For a log type, you will get all the logs.
+
+get_screenshot_as_base64
+
+You can get a screenshot of the present window as a base64 encoded string.
+
+get_screenshot_as_file
+
+You will get the screenshot of the present window as a binary file.
+
+get_screenshot_as_png
+
+It will save a screenshot of the present window as a PNG file.
+
+get_window_position
+
+You will get the coordinates of the present window.
+
+get_window_rect
+
+You will get the coordinates of the present window along with the width and height.
+
+get_window_size
+
+You will get only the height and width of the present window.
+
+implicitly_wait
+
+You will be able to set a timeout to wait implicitly for an event to occur.
+
+maximize_window
+
+You can maximize the present window that is being used by the web driver.
+
+minimize_window
+
+You will be able to minimize the present window.
+
+quit
+
+You will be able to quit the driver, closing all the associated windows.
+
+refresh
+
+You will be able to refresh the current frame.
+
+set_page_load_timeout
+
+It will allow you to set a time to wait before page loads or else it will throw an error.
+
+set_script_timeout
+
+You will be able to set the time that the script needs to wait during the call of an execute_async_script before yielding an error.
+
+set_window_position
+
+You will be able to set the coordinates of the current window.
+
+set_window_rect
+
+You will be able to set the coordinates of the current window along with the height and width.
+
+current_url
+
+You can get the URL of the web page.
+
+current_window_handle
+
+You can get the handle of the window.
+
+page_source
+
+You will get the current page’s source.
+
+title
+
+It will return the current page’s title
+
+
+
+
+Element Methods
+Description
+is_selected()
+
+This method returns a boolean value based on whether the element is selected or not.
+
+is_displayed()
+
+This method returns a boolean value based on whether or not the element is displayed.
+
+is_enabled()
+
+This method returns a boolean value based on whether or not the element is enabled.
+
+get_property()
+
+This method can be used to get the properties of a particular element, like text_length property, etc.
+
+get_attribute()
+
+This method can be used to get attributes of a particular element, like getting an href attribute, etc.
+
+send_keys()
+
+This method is used to send a text property to any input field or even an anchor tag or a paragraph.
+
+click()
+
+This method is used to click on any element.
+
+clear()
+
+This method is used to clear the text of any input field.
+
+screenshot_as_png()
+
+This method is used to take a screenshot of the current element.
+
+submit()
+
+This method is used to submit a form.
+
+value_of_css_property()
+
+This method is used to get the value of a specific element’s CSS property.
+
+location
+
+This method is used to get the location of the elements.
+
+screenshot()
+
+This method is used to take the screenshot in the form of binary data.
+
+parent
+
+This method is used to get the parent of the current element.
+
+size
+
+This method is used to receive the size of the current element.
+
+tag_name
+
+This method is used to get the tag name.
+
+text
+
+This method is used to get the text.
+
+rect
+
+This method is used to get a dictionary containing the location and size of the element.
+
+screenshot_as_base64
+
+This method is used to take the screenshot as a base64 encoded string.
+
+to automate certain task we can use schedule to get it done by anytime
