@@ -31,7 +31,7 @@ def classjoin():
     driver.quit()
 def job_with_timezone():
     now = datetime.now(pytz.timezone('Asia/Kolkata'))
-    if now.hour == 10 and now.minute == 30:
+    if now.hour == 10 and now.minute == 00:
         classjoin()
 def main():
     schedule.every().monday.do(job_with_timezone)
