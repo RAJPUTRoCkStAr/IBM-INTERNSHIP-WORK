@@ -1,0 +1,34 @@
+first import cv2 
+than read the image using cv2.imread() function
+
+cv2.imread(filename[,flag])  
+Parameters:
+filename: Name of the file to be loaded
+flag: The flag specifies the color type of a loaded image:
+CV_LOAD_IMAGE_ANYDEPTH - If we set it as flag, it will return 16-bits/32-bits image when the input has the corresponding depth, otherwise convert it to 8-BIT.
+CV_LOAD_IMAGE_COLOR - If we set it as flag, it always return the converted image to the color one.
+C V_LOAD_IMAGE_GRAYSCALE - If we set it as flag, it always convert image into the grayscale.
+
+it only has 1 or 2 for path 2 will get you greyscale and 1 will get default image or in place of path just write the thing 
+
+
+
+than to show image using cv2.imshow() function
+than we meed to wait otherwise it will destroy it in sec we can wait using cv2.waitKey(0) function 
+
+
+OpenCV imwrite() function is used to save an image to a specified file. The file extension defines the image format. The syntax is the following:
+
+cv2.imwrite(filename, img[,params]) => this is also like saving a image 
+Parameters:
+filename- Name of the file to be loaded
+
+image- Image to be saved.
+
+params- The following parameters are currently supported:
+
+For JPEG, quality can be from 0 to 100. The default value is 95.
+For PNG, quality can be the compress level from 0 to 9. The default value is 1.
+For PPM, PGM, or PBM, it can be a binary format flag 0 or 1. The default value is 1.
+
+Edge detection is a fundamental technique in image processing and computer vision. It identifies points in an image where brightness changes sharply or has discontinuities.
