@@ -1,6 +1,6 @@
 import cv2 as cv
 import mediapipe as mp
-from facedetmod import FaceDetector
+from openmod.FaceDetection import FaceDetector
 from Plot import LivePlot 
 
 cap = cv.VideoCapture(0)
