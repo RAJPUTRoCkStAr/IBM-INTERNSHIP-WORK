@@ -28,7 +28,7 @@ my_python_package/
 ├── setup.py
 ├── LICENSE
 ├── README.md
-└── .gitignore
+└── MANIFEST.in
 ```
 ## Setting Up
 First install the following package and make sure that they are availabel to use with you
