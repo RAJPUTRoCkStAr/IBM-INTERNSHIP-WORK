@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spaCy Labels</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        caption {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>spaCy Labels</h1>
+
+    <table>
+        <caption>1. Named Entity Recognition (NER) Labels</caption>
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Meaning</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>PERSON</td>
+                <td>People</td>
+                <td>Named person, e.g., "John", "Elon Musk".</td>
+            </tr>
+            <tr>
+                <td>ORG</td>
+                <td>Organization</td>
+                <td>Companies, agencies, institutions, e.g., "Apple", "NASA".</td>
+            </tr>
+            <tr>
+                <td>GPE</td>
+                <td>Geopolitical Entity</td>
+                <td>Countries, cities, states, e.g., "United States", "Paris".</td>
+            </tr>
+            <tr>
+                <td>LOC</td>
+                <td>Location</td>
+                <td>Non-political locations, e.g., "Mount Everest".</td>
+            </tr>
+            <tr>
+                <td>DATE</td>
+                <td>Dates</td>
+                <td>Absolute or relative dates, e.g., "January 1", "yesterday".</td>
+            </tr>
+            <tr>
+                <td>TIME</td>
+                <td>Time</td>
+                <td>Times of day, e.g., "2:30 pm".</td>
+            </tr>
+            <tr>
+                <td>MONEY</td>
+                <td>Monetary Values</td>
+                <td>Amounts of money, e.g., "$5 million".</td>
+            </tr>
+            <tr>
+                <td>QUANTITY</td>
+                <td>Quantities</td>
+                <td>Measurements, e.g., "10 kilograms".</td>
+            </tr>
+            <tr>
+                <td>EVENT</td>
+                <td>Event</td>
+                <td>Named events, e.g., "World Cup", "Olympics".</td>
+            </tr>
+            <tr>
+                <td>PRODUCT</td>
+                <td>Product</td>
+                <td>Products, e.g., "iPhone", "MacBook".</td>
+            </tr>
+            <tr>
+                <td>NORP</td>
+                <td>Nationalities, Religions, Political Groups</td>
+                <td>E.g., "American", "Buddhist".</td>
+            </tr>
+            <tr>
+                <td>FAC</td>
+                <td>Facility</td>
+                <td>Buildings, airports, highways, bridges, e.g., "Statue of Liberty".</td>
+            </tr>
+            <tr>
+                <td>LAW</td>
+                <td>Law</td>
+                <td>Named documents like laws, treaties, e.g., "Constitution".</td>
+            </tr>
+            <tr>
+                <td>WORK_OF_ART</td>
+                <td>Artistic Works</td>
+                <td>Titles of books, songs, etc., e.g., "Mona Lisa".</td>
+            </tr>
+            <tr>
+                <td>LANGUAGE</td>
+                <td>Language</td>
+                <td>Any named language, e.g., "English", "Spanish".</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>2. Part of Speech (POS) Labels</caption>
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Meaning</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>NOUN</td>
+                <td>Noun</td>
+                <td>Names of people, places, things, e.g., "cat", "house".</td>
+            </tr>
+            <tr>
+                <td>VERB</td>
+                <td>Verb</td>
+                <td>Action or state, e.g., "run", "be".</td>
+            </tr>
+            <tr>
+                <td>ADJ</td>
+                <td>Adjective</td>
+                <td>Describes nouns, e.g., "happy", "blue".</td>
+            </tr>
+            <tr>
+                <td>ADV</td>
+                <td>Adverb</td>
+                <td>Modifies verbs, adjectives, e.g., "quickly", "very".</td>
+            </tr>
+            <tr>
+                <td>PRON</td>
+                <td>Pronoun</td>
+                <td>Replaces nouns, e.g., "he", "they".</td>
+            </tr>
+            <tr>
+                <td>DET</td>
+                <td>Determiner</td>
+                <td>Words that introduce nouns, e.g., "the", "a".</td>
+            </tr>
+            <tr>
+                <td>ADP</td>
+                <td>Adposition (prepositions)</td>
+                <td>E.g., "in", "on", "under".</td>
+            </tr>
+            <tr>
+                <td>AUX</td>
+                <td>Auxiliary verb</td>
+                <td>Helping verbs, e.g., "is", "will".</td>
+            </tr>
+            <tr>
+                <td>CONJ</td>
+                <td>Conjunction</td>
+                <td>Connects words or phrases, e.g., "and", "or".</td>
+            </tr>
+            <tr>
+                <td>INTJ</td>
+                <td>Interjection</td>
+                <td>Exclamations, e.g., "wow", "oops".</td>
+            </tr>
+            <tr>
+                <td>NUM</td>
+                <td>Numeral</td>
+                <td>Numbers, e.g., "one", "two".</td>
+            </tr>
+            <tr>
+                <td>PART</td>
+                <td>Particle</td>
+                <td>Small function words, e.g., "to" (in "to fly").</td>
+            </tr>
+            <tr>
+                <td>PROPN</td>
+                <td>Proper Noun</td>
+                <td>Specific names of people, places, e.g., "John", "London".</td>
+            </tr>
+            <tr>
+                <td>PUNCT</td>
+                <td>Punctuation</td>
+                <td>Punctuation marks, e.g., ".", ",", "!".</td>
+            </tr>
+            <tr>
+                <td>SYM</td>
+                <td>Symbol</td>
+                <td>Mathematical or currency symbols, e.g., "$", "%".</td>
+            </tr>
+            <tr>
+                <td>X</td>
+                <td>Other</td>
+                <td>Unrecognized words.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>3. Dependency Labels</caption>
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Meaning</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>nsubj</td>
+                <td>Nominal subject</td>
+                <td>The subject of the sentence, e.g., "John" in "John eats pizza".</td>
+            </tr>
+            <tr>
+                <td>dobj</td>
+                <td>Direct object</td>
+                <td>The object being acted upon, e.g., "pizza" in "John eats pizza".</td>
+            </tr>
+            <tr>
+                <td>ROOT</td>
+                <td>Root</td>
+                <td>The root of the sentence, usually the main verb, e.g., "eats".</td>
+            </tr>
+            <tr>
+                <td>aux</td>
+                <td>Auxiliary</td>
+                <td>Helping verbs, e.g., "is" in "He is eating".</td>
+            </tr>
+            <tr>
+                <td>prep</td>
+                <td>Prepositional modifier</td>
+                <td>Prepositions, e.g., "in" in "He lives in a house".</td>
+            </tr>
+            <tr>
+                <td>pobj</td>
+                <td>Object of preposition</td>
+                <td>The object of the preposition, e.g., "house" in "He lives in a house".</td>
+            </tr>
+            <tr>
+                <td>poss</td>
+                <td>Possessive modifier</td>
+                <td>Shows possession, e.g., "John's" in "John's book".</td>
+            </tr>
+            <tr>
+                <td>compound</td>
+                <td>Compound</td>
+                <td>Part of a compound noun, e.g., "ice cream".</td>
+            </tr>
+            <tr>
+                <td>advmod</td>
+                <td>Adverbial modifier</td>
+                <td>Modifies verbs or adjectives, e.g., "quickly" in "He ran quickly".</td>
+            </tr>
+            <tr>
+                <td>amod</td>
+                <td>Adjectival modifier</td>
+                <td>Modifies nouns, e.g., "big" in "The big house".</td>
+            </tr>
+            <tr>
+                <td>attr</td>
+                <td>Attribute</td>
+                <td>Used with linking verbs, e.g., "happy" in "He is happy".</td>
+            </tr>
+            <tr>
+                <td>csubj</td>
+                <td>Clausal subject</td>
+                <td>When the subject is a clause, e.g., "What she said" in "What she said is important".</td>
+            </tr>
+            <tr>
+                <td>neg</td>
+                <td>Negation modifier</td>
+                <td>Negates a word, e.g., "not" in "He is not happy".</td>
+            </tr>
+            <tr>
+                <td>cc</td>
+                <td>Coordinating conjunction</td>
+                <td>Joins words, phrases, or clauses, e.g., "and", "or".</td>
+            </tr>
+            <tr>
+                <td>conj</td>
+                <td>Conjunct</td>
+                <td>The second part of a conjunction, e.g., "ice cream" in "I like cake and ice cream".</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

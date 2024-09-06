@@ -1,0 +1,431 @@
+Sklearn model and there parameter and details about it
+
+1. Linear Models
+Linear Regression (LinearRegression):
+
+fit_intercept: Whether to calculate the intercept for this model.
+normalize: If True, the regressors X will be normalized before regression.
+n_jobs: Number of jobs to run in parallel.
+Logistic Regression (LogisticRegression):
+
+penalty: Regularization type ('l1', 'l2', 'elasticnet', 'none').
+C: Inverse of regularization strength (smaller values specify stronger regularization).
+solver: Algorithm to use in the optimization problem ('liblinear', 'newton-cg', 'lbfgs', 'sag', 'saga').
+2. Tree-based Models
+Decision Trees (DecisionTreeClassifier, DecisionTreeRegressor):
+
+criterion: The function to measure the quality of a split ('gini', 'entropy' for classification; 'mse', 'friedman_mse', 'mae' for regression).
+max_depth: Maximum depth of the tree.
+min_samples_split: Minimum number of samples required to split an internal node.
+min_samples_leaf: Minimum number of samples required to be at a leaf node.
+Random Forest (RandomForestClassifier, RandomForestRegressor):
+
+Parameters include those of decision trees plus:
+n_estimators: Number of trees in the forest.
+max_features: Number of features to consider when looking for the best split.
+bootstrap: Whether bootstrap samples are used when building trees.
+3. Support Vector Machines (SVM)
+SVM (SVC, SVR):
+kernel: Kernel type ('linear', 'poly', 'rbf', 'sigmoid', 'precomputed').
+C: Penalty parameter of the error term.
+gamma: Kernel coefficient for 'rbf', 'poly', and 'sigmoid'.
+4. Nearest Neighbors
+k-Nearest Neighbors (KNeighborsClassifier, KNeighborsRegressor):
+n_neighbors: Number of neighbors to use.
+weights: Weight function used in prediction ('uniform', 'distance').
+metric: Distance metric used to calculate the distance between instances ('euclidean', 'manhattan', 'chebyshev').
+5. Naive Bayes
+Naive Bayes (GaussianNB, MultinomialNB, BernoulliNB):
+Parameters depend on the specific type of Naive Bayes model.
+6. Ensemble Methods
+Gradient Boosting (GradientBoostingClassifier, GradientBoostingRegressor):
+
+n_estimators: Number of boosting stages to perform.
+learning_rate: Learning rate shrinks the contribution of each tree.
+max_depth: Maximum depth of the individual trees.
+AdaBoost (AdaBoostClassifier, AdaBoostRegressor):
+
+n_estimators: Number of boosting stages.
+learning_rate: Learning rate shrinks the contribution of each classifier.
+7. Clustering
+KMeans (KMeans):
+n_clusters: Number of clusters to form.
+init: Method for initialization of centroids ('k-means++', 'random').
+8. Dimensionality Reduction
+Principal Component Analysis (PCA):
+n_components: Number of components to keep.
+svd_solver: Solver to use for matrix decomposition.
+9. Preprocessing
+StandardScaler (StandardScaler):
+No specific model, but used for scaling features.
+10. Linear Models (continued)
+Ridge Regression (Ridge):
+
+alpha: Regularization strength (higher values specify stronger regularization).
+solver: Solver to use for the optimization problem ('auto', 'svd', 'cholesky', 'lsqr', 'sparse_cg', 'sag', 'saga').
+Lasso Regression (Lasso):
+
+alpha: Regularization strength.
+max_iter: Maximum number of iterations.
+ElasticNet (ElasticNet):
+
+alpha: Regularization strength.
+l1_ratio: Mixing parameter, with 0 <= l1_ratio <= 1.
+11. Kernel Methods
+Kernel Ridge Regression (KernelRidge):
+alpha: Regularization strength.
+kernel: Kernel type ('linear', 'polynomial', 'rbf', 'laplacian', 'chi2', 'sigmoid', 'cosine').
+gamma: Kernel coefficient for 'rbf', 'poly', 'sigmoid', 'laplacian', and 'chi2'.
+12. Neural Networks
+Multi-layer Perceptron (MLP) (MLPClassifier, MLPRegressor):
+hidden_layer_sizes: Number of neurons in each hidden layer.
+activation: Activation function ('identity', 'logistic', 'tanh', 'relu').
+solver: Solver for weight optimization ('lbfgs', 'sgd', 'adam').
+learning_rate: Learning rate schedule for weight updates ('constant', 'invscaling', 'adaptive').
+13. Support Vector Machines (SVM) (continued)
+Nu-Support Vector Classification (NuSVC):
+
+nu: An upper bound on the fraction of training errors and a lower bound of the fraction of support vectors.
+kernel, C, gamma: Similar to SVC.
+Nu-Support Vector Regression (NuSVR):
+
+nu: Similar to NuSVC.
+kernel, C, gamma: Similar to SVR.
+14. Ensemble Methods (continued)
+Extra Trees (ExtraTreesClassifier, ExtraTreesRegressor):
+
+n_estimators, max_depth, min_samples_split: Similar to RandomForest.
+Bagging (BaggingClassifier, BaggingRegressor):
+
+base_estimator: The base estimator to fit on random subsets of the dataset.
+n_estimators: Number of base estimators.
+15. Naive Bayes (continued)
+Complement Naive Bayes (ComplementNB):
+alpha: Additive smoothing parameter (like MultinomialNB).
+16. Clustering (continued)
+DBSCAN (DBSCAN):
+
+eps: Maximum distance between two samples for one to be considered as in the neighborhood of the other.
+min_samples: Minimum number of samples in a neighborhood for a point to be considered as a core point.
+Mean Shift (MeanShift):
+
+bandwidth: Bandwidth parameter to control the size of the kernel.
+17. Dimensionality Reduction (continued)
+Truncated Singular Value Decomposition (TruncatedSVD):
+n_components: Number of components to keep.
+18. Preprocessing (continued)
+MinMaxScaler (MinMaxScaler):
+Scales features to a given range (default is [0, 1]).
+19. Ensemble Methods (continued)
+Voting Classifier (VotingClassifier):
+estimators: List of (name, estimator) pairs.
+voting: Voting strategy ('hard', 'soft').
+20. Gaussian Processes
+Gaussian Process Classifier (GaussianProcessClassifier):
+kernel: Kernel function.
+optimizer: Optimization algorithm for hyperparameter fitting.
+21. Others
+Isolation Forest (IsolationForest):
+n_estimators: Number of base estimators.
+max_samples: Number of samples to draw from X to train each base estimator.
+22. Linear and Quadratic Discriminant Analysis
+Linear Discriminant Analysis (LinearDiscriminantAnalysis):
+
+solver: Solver for eigenvalue decomposition ('svd', 'lsqr', 'eigen').
+shrinkage: Shrinkage parameter for 'lsqr' and 'eigen' solvers.
+Quadratic Discriminant Analysis (QuadraticDiscriminantAnalysis):
+
+No hyperparameters to set explicitly beyond the standard interface.
+23. Generalized Linear Models
+Generalized Linear Models (GammaRegressor, PoissonRegressor, etc.):
+Parameters vary based on the specific distribution family and link function chosen.
+24. Nearest Centroid
+Nearest Centroid (NearestCentroid):
+metric: Distance metric to use ('euclidean', 'manhattan', 'cosine').
+25. Passive Aggressive Algorithms
+Passive Aggressive Classifier (PassiveAggressiveClassifier):
+
+C: Regularization parameter.
+loss: Loss function ('hinge', 'squared_hinge').
+Passive Aggressive Regressor (PassiveAggressiveRegressor):
+
+C: Regularization parameter.
+loss: Loss function ('epsilon_insensitive', 'squared_epsilon_insensitive').
+26. Decision Tree (continued)
+Extra Tree Classifier (ExtraTreeClassifier):
+
+criterion, max_depth, min_samples_split: Similar to DecisionTreeClassifier.
+Extra Tree Regressor (ExtraTreeRegressor):
+
+criterion, max_depth, min_samples_split: Similar to DecisionTreeRegressor.
+27. Ensemble Methods (continued)
+Gradient Boosting (continued)
+Histogram-Based Gradient Boosting (HistGradientBoostingClassifier, HistGradientBoostingRegressor):
+loss: Loss function to optimize ('auto', 'binary_crossentropy', 'categorical_crossentropy', 'poisson').
+learning_rate, max_iter: Similar to GradientBoosting.
+28. Neural Network Models
+Stochastic Gradient Descent (SGDClassifier, SGDRegressor):
+loss: Loss function to optimize ('hinge', 'log', 'modified_huber', 'squared_loss', 'huber').
+penalty: Regularization term ('l2', 'l1', 'elasticnet').
+alpha: Constant that multiplies the regularization term.
+29. Support Vector Machines (SVM) (continued)
+One-Class SVM (OneClassSVM):
+kernel, gamma: Similar to SVC.
+nu: An upper bound on the fraction of training errors and a lower bound on the fraction of support vectors.
+30. Gaussian Processes (continued)
+Gaussian Process Regressor (GaussianProcessRegressor):
+kernel, optimizer: Similar to GaussianProcessClassifier.
+alpha: Value added to the diagonal of the kernel matrix during fitting.
+31. Naive Bayes (continued)
+Sparse Multinomial Naive Bayes (MultinomialNB):
+alpha: Additive smoothing parameter (smaller values specify stronger regularization).
+32. Ensemble Methods (continued)
+AdaBoost (continued)
+Real AdaBoost (RealAdaBoostClassifier, RealAdaBoostRegressor):
+base_estimator: The base estimator to fit on the weighted dataset.
+n_estimators, learning_rate: Similar to AdaBoost.
+33. Clustering (continued)
+Affinity Propagation (AffinityPropagation):
+damping: Damping factor between 0.5 and 1 to prevent oscillations.
+34. Isolation Forest (continued)
+Isolation Forest (IsolationForest):
+contamination: Expected proportion of outliers in the data set.
+35. Neural Networks (continued)
+Restricted Boltzmann Machine (BernoulliRBM):
+n_components: Number of binary hidden units.
+learning_rate: Learning rate for weight updates.
+36. Ensemble Methods (continued)
+Stacking (StackingClassifier, StackingRegressor):
+estimators: List of (name, estimator) tuples for the base estimators.
+final_estimator: Meta-estimator to be fitted on the stacked predictions.
+37. Linear and Quadratic Discriminant Analysis (continued)
+Quadratic Discriminant Analysis (QuadraticDiscriminantAnalysis):
+No hyperparameters to set explicitly beyond the standard interface.
+38. Generalized Linear Models (continued)
+Generalized Linear Models (TweedieRegressor):
+power: Power parameter for the Tweedie distribution.
+39. Nearest Neighbors (continued)
+Radius Neighbors (RadiusNeighborsClassifier, RadiusNeighborsRegressor):
+radius: Range of parameter space to use by default for radius_neighbors queries.
+40. Passive Aggressive Algorithms (continued)
+Passive Aggressive Classifier (PassiveAggressiveClassifier):
+class_weight: Weights associated with classes in the form {class_label: weight}.
+41. Decision Tree (continued)
+Decision Tree (continued)
+DecisionTreeClassifier, DecisionTreeRegressor:
+presort: Whether to presort the data to speed up the finding of best splits.
+42. Ensemble Methods (continued)
+Gradient Boosting (continued)
+GradientBoostingClassifier, GradientBoostingRegressor:
+subsample: Fraction of samples used for fitting the individual base learners.
+min_weight_fraction_leaf: Minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node.
+43. Neural Network Models (continued)
+Multi-layer Perceptron (MLP) (continued)
+MLPClassifier, MLPRegressor:
+beta_1, beta_2, epsilon: Parameters for the Adam optimizer.
+44. Support Vector Machines (SVM) (continued)
+Linear Support Vector Classifier (LinearSVC):
+loss: Specifies the loss function ('hinge', 'squared_hinge').
+45. Gaussian Processes (continued)
+Gaussian Process Classifier (continued)
+GaussianProcessClassifier:
+multi_class: Strategy to use for multiclass predictions ('one_vs_rest', 'one_vs_one').
+46. Ensemble Methods (continued)
+Bagging (continued)
+BaggingClassifier, BaggingRegressor:
+bootstrap_features: Whether features are drawn with replacement.
+47. Clustering (continued)
+Birch (Birch):
+threshold: Branching factor threshold.
+branching_factor: Maximum number of subclusters.
+48. Isolation Forest (continued)
+Isolation Forest (continued)
+IsolationForest:
+max_features: Number of features to draw from X to train each base estimator.
+49. Ensemble Methods (continued)
+Voting Regressor (VotingRegressor):
+weights: Sequence of weights (float or int) to weight the occurrences of predicted values before averaging.
+50. Gaussian Processes (continued)
+Sparse Gaussian Process Classifier (SparseGaussianProcessClassifier):
+max_iter_predict: Maximum number of iterations for predicting.
+51. Others
+Neighborhood Components Analysis (NCA):
+n_components: Number of neighbors to consider for each point.
+metric: Distance metric ('euclidean', 'manhattan', 'cosine').
+52. Generalized Linear Models (continued)
+Tweedie Generalized Linear Model (TweedieRegressor):
+alpha: Regularization strength.
+53. Linear and Quadratic Discriminant Analysis (continued)
+Quadratic Discriminant Analysis (QuadraticDiscriminantAnalysis):
+No hyperparameters to set explicitly beyond the standard interface.
+54. Generalized Linear Models (continued)
+Generalized Linear Models (GammaRegressor, PoissonRegressor, etc.):
+Parameters vary based on the specific distribution family and link function chosen.
+55. Nearest Neighbors (continued)
+k-Nearest Neighbors (continued)
+Radius Neighbors (RadiusNeighborsClassifier, RadiusNeighborsRegressor):
+radius: Range of parameter space to use by default for radius_neighbors queries.
+56. Passive Aggressive Algorithms (continued)
+Passive Aggressive Classifier (PassiveAggressiveClassifier):
+class_weight: Weights associated with classes in the form {class_label: weight}.
+57. Decision Tree (continued)
+Decision Tree (continued)
+DecisionTreeClassifier, DecisionTreeRegressor:
+presort: Whether to presort the data to speed up the finding of best splits.
+58. Ensemble Methods (continued)
+Gradient Boosting (continued)
+GradientBoostingClassifier, GradientBoostingRegressor:
+subsample: Fraction of samples used for fitting the individual base learners.
+min_weight_fraction_leaf: Minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node.
+59. Neural Network Models (continued)
+Multi-layer Perceptron (MLP) (continued)
+MLPClassifier, MLPRegressor:
+beta_1, beta_2, epsilon: Parameters for the Adam optimizer.
+60. Support Vector Machines (SVM) (continued)
+Linear Support Vector Classifier (LinearSVC):
+loss: Specifies the loss function ('hinge', 'squared_hinge').
+61. Gaussian Processes (continued)
+Gaussian Process Classifier (continued)
+GaussianProcessClassifier:
+multi_class: Strategy to use for multiclass predictions ('one_vs_rest', 'one_vs_one').
+62. Ensemble Methods (continued)
+Bagging (continued)
+BaggingClassifier, BaggingRegressor:
+bootstrap_features: Whether features are drawn with replacement.
+63. Clustering (continued)
+Birch (Birch):
+threshold: Branching factor threshold.
+branching_factor: Maximum number of subclusters.
+64. Isolation Forest (continued)
+Isolation Forest (continued)
+IsolationForest:
+max_features: Number of features to draw from X to train each base estimator.
+65. Ensemble Methods (continued)
+Voting Regressor (VotingRegressor):
+weights: Sequence of weights (float or int) to weight the occurrences of predicted values before averaging.
+66. Gaussian Processes (continued)
+Sparse Gaussian Process Classifier (SparseGaussianProcessClassifier):
+max_iter_predict: Maximum number of iterations for predicting.
+67. Others
+Neighborhood Components Analysis (NCA):
+n_components: Number of neighbors to consider for each point.
+metric: Distance metric ('euclidean', 'manhattan', 'cosine').
+68. Generalized Linear Models (continued)
+Tweedie Generalized Linear Model (TweedieRegressor):
+alpha: Regularization strength.
+69. Linear and Quadratic Discriminant Analysis (continued)
+Quadratic Discriminant Analysis (QuadraticDiscriminantAnalysis):
+No hyperparameters to set explicitly beyond the standard interface.
+70. Generalized Linear Models (continued)
+Generalized Linear Models (GammaRegressor, PoissonRegressor, etc.):
+Parameters vary based on the specific distribution family and link function chosen.
+71. Nearest Neighbors (continued)
+k-Nearest Neighbors (continued)
+Radius Neighbors (RadiusNeighborsClassifier, RadiusNeighborsRegressor):
+radius: Range of parameter space to use by default for radius_neighbors queries.
+72. Passive Aggressive Algorithms (continued)
+Passive Aggressive Classifier (PassiveAggressiveClassifier):
+class_weight: Weights associated with classes in the form {class_label: weight}.
+73. Decision Tree (continued)
+Decision Tree (continued)
+DecisionTreeClassifier, DecisionTreeRegressor:
+presort: Whether to presort the data to speed up the finding of best splits.
+74. Ensemble Methods (continued)
+Gradient Boosting (continued)
+GradientBoostingClassifier, GradientBoostingRegressor:
+subsample: Fraction of samples used for fitting the individual base learners.
+min_weight_fraction_leaf: Minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node.
+75. Neural Network Models (continued)
+Multi-layer Perceptron (MLP) (continued)
+MLPClassifier, MLPRegressor:
+beta_1, beta_2, epsilon: Parameters for the Adam optimizer.
+76. Support Vector Machines (SVM) (continued)
+Linear Support Vector Classifier (LinearSVC):
+loss: Specifies the loss function ('hinge', 'squared_hinge').
+77. Gaussian Processes (continued)
+Gaussian Process Classifier (continued)
+GaussianProcessClassifier:
+multi_class: Strategy to use for multiclass predictions ('one_vs_rest', 'one_vs_one').
+78. Ensemble Methods (continued)
+Bagging (continued)
+BaggingClassifier, BaggingRegressor:
+bootstrap_features: Whether features are drawn with replacement.
+79. Clustering (continued)
+Birch (Birch):
+threshold: Branching factor threshold.
+branching_factor: Maximum number of subclusters.
+80. Isolation Forest (continued)
+Isolation Forest (continued)
+IsolationForest:
+max_features: Number of features to draw from X to train each base estimator.
+81. Ensemble Methods (continued)
+Voting Regressor (VotingRegressor):
+weights: Sequence of weights (float or int) to weight the occurrences of predicted values before averaging.
+82. Gaussian Processes (continued)
+Sparse Gaussian Process Classifier (SparseGaussianProcessClassifier):
+max_iter_predict: Maximum number of iterations for predicting.
+83. Others
+Neighborhood Components Analysis (NCA):
+n_components: Number of neighbors to consider for each point.
+metric: Distance metric ('euclidean', 'manhattan', 'cosine').
+84. Generalized Linear Models (continued)
+Tweedie Generalized Linear Model (TweedieRegressor):
+alpha: Regularization strength.
+85. Nearest Neighbors (continued)
+Nearest Neighbors (NearestNeighbors):
+algorithm: Algorithm used to compute the nearest neighbors ('auto', 'ball_tree', 'kd_tree', 'brute').
+86. Linear and Quadratic Discriminant Analysis (continued)
+Quadratic Discriminant Analysis (QuadraticDiscriminantAnalysis):
+No hyperparameters to set explicitly beyond the standard interface.
+87. Generalized Linear Models (continued)
+Generalized Linear Models (GammaRegressor, PoissonRegressor, etc.):
+Parameters vary based on the specific distribution family and link function chosen.
+88. Nearest Neighbors (continued)
+k-Nearest Neighbors (continued)
+Radius Neighbors (RadiusNeighborsClassifier, RadiusNeighborsRegressor):
+radius: Range of parameter space to use by default for radius_neighbors queries.
+89. Passive Aggressive Algorithms (continued)
+Passive Aggressive Classifier (PassiveAggressiveClassifier):
+class_weight: Weights associated with classes in the form {class_label: weight}.
+90. Decision Tree (continued)
+Decision Tree (continued)
+DecisionTreeClassifier, DecisionTreeRegressor:
+presort: Whether to presort the data to speed up the finding of best splits.
+91. Ensemble Methods (continued)
+Gradient Boosting (continued)
+GradientBoostingClassifier, GradientBoostingRegressor:
+subsample: Fraction of samples used for fitting the individual base learners.
+min_weight_fraction_leaf: Minimum weighted fraction of the sum total of weights (of all the input samples) required to be at a leaf node.
+92. Neural Network Models (continued)
+Multi-layer Perceptron (MLP) (continued)
+MLPClassifier, MLPRegressor:
+beta_1, beta_2, epsilon: Parameters for the Adam optimizer.
+93. Support Vector Machines (SVM) (continued)
+Linear Support Vector Classifier (LinearSVC):
+loss: Specifies the loss function ('hinge', 'squared_hinge').
+94. Gaussian Processes (continued)
+Gaussian Process Classifier (continued)
+GaussianProcessClassifier:
+multi_class: Strategy to use for multiclass predictions ('one_vs_rest', 'one_vs_one').
+95. Ensemble Methods (continued)
+Bagging (continued)
+BaggingClassifier, BaggingRegressor:
+bootstrap_features: Whether features are drawn with replacement.
+96. Clustering (continued)
+Birch (Birch):
+threshold: Branching factor threshold.
+branching_factor: Maximum number of subclusters.
+97. Isolation Forest (continued)
+Isolation Forest (continued)
+IsolationForest:
+max_features: Number of features to draw from X to train each base estimator.
+98. Ensemble Methods (continued)
+Voting Regressor (VotingRegressor):
+weights: Sequence of weights (float or int) to weight the occurrences of predicted values before averaging.
+99. Gaussian Processes (continued)
+Sparse Gaussian Process Classifier (SparseGaussianProcessClassifier):
+max_iter_predict: Maximum number of iterations for predicting.
+100. Others
+Neighborhood Components Analysis (NCA):
+n_components: Number of neighbors to consider for each point.
+metric: Distance metric ('euclidean', 'manhattan', 'cosine').
