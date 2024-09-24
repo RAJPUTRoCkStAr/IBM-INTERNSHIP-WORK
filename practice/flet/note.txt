@@ -1,0 +1,26 @@
+What is Flet?
+Flet is a framework that allows building web, desktop and mobile applications in Python without prior experience in frontend development.
+
+You can build a UI for your program with Flet controls which are based on Flutter by Google. Flet goes beyond merely wrapping Flutter widgets. It adds its own touch by combining smaller widgets, simplifying complexities, implementing UI best practices, and applying sensible defaults. This ensures that your applications look stylish and polished without requiring additional design efforts on your part.
+
+How to run flet applications:
+
+for mobile => flet run <filename>.py 
+for web => flet run --web <filename>.py
+
+we can also create template and it will gives us after that we can simply ruh it 
+this is an example of creating template => flet create --template counter .
+now we can simply run this using 
+for mobile => flet run  
+for web => flet run --web 
+the above thing is usually used for counter or minimal
+
+if you want to make just an sample template we can do that using 
+for sample template => flet create .
+to run this also we can => flet run 
+
+To change the port we can simply write 
+flet run --web --port 8000 <filename> (if not created with template)
+
+To automatically run it and dont want to reload it everytime 
+flet run --web --port 8000 -d  <filename> (if not created with template)
